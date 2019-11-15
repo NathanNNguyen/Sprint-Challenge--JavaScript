@@ -15,15 +15,20 @@ class CuboidMaker {
 }
 
 
-class cuboid extends CuboidMaker {
+class A extends CuboidMaker {
     constructor(att) {
         super(att);
-        this.length = 4,
-            this.width = 5,
-            this.height = 5
+        this.length = att.length,
+            this.width = att.width,
+            this.height = att.height
     }
 }
 
+const cuboid = new A({
+    length: 4,
+    width: 5,
+    height: 5
+});
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
